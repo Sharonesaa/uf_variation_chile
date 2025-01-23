@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #4682b4;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #4682b4;
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #4682b4;
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    width: fit-content;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+p {
+    text-align: center;
+}
+
+.button, button {
+    display: inline-block;
+    background-color: #1e90ff;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.button:hover, button:hover {
+    background-color: #1c86ee;
+}
+
+form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="number"] {
+    padding: 8px;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 150px;
+}

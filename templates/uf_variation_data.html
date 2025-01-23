@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variación de la UF - {{ year }}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Variación de la UF en el año {{ year }}</h1>
+
+        <h3>Valor mínimo de la UF: {{ data.day_min_uf }}</h3>
+        <h3>Valor máximo de la UF: {{ data.day_max_uf }}</h3>
+
+        <h3>Meses con aumento de la UF:</h3>
+        {% if data.months_up %}
+            <ul>
+                {% for month, change in data.months_up %}
+                    <li>{{ month }}: {{ change }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>* Esto es un desierto</p>
+        {% endif %}
+
+        <h3>Meses con disminución de la UF:</h3>
+        {% if data.months_down %}
+            <ul>
+                {% for month, change in data.months_down %}
+                    <li>{{ month }}: {{ change }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>* Esto es un desierto</p>
+        {% endif %}
+
+        <h3>Meses sin variación:</h3>
+        {% if data.months_no_change %}
+            <ul>
+                {% for month in data.months_no_change %}
+                    <li>{{ month }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>* Esto es un desierto</p>
+        {% endif %}
+
+        <br>
+        <a class="button" style="display: block;" href="/uf-variation">Volver al formulario</a>
+    </div>
+</body>
+</html>
